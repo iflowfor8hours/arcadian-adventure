@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "New Blog, New Home"
+date = "2010-04-07"
 
 +++
 

@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Book Idea"
+date = "2012-01-23"
 
 +++
 

@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Opscode Community Summit 2012"
+date = "2012-11-02"
 
 +++
 

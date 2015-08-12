@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Vagrant, chef-solo, and databags learning experience"
+date = "2013-11-01"
 
 +++
 

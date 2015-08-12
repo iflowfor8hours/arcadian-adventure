@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Changed my blog to Jekyll"
+date = "2011-08-25"
 
 +++
 

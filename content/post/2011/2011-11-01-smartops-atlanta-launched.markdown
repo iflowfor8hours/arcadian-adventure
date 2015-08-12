@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "SmartOps Atlanta Launched!"
+date = "2011-11-01"
 
 +++
 

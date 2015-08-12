@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "ruby web-based LDAP password changer"
+date = "2012-02-01"
 
 +++
 

@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Finishing my truck"
+date = "2011-09-13"
 
 +++
 

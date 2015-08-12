@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Project Sputnik Beta Day one"
+date = "2012-09-28"
 
 +++
 

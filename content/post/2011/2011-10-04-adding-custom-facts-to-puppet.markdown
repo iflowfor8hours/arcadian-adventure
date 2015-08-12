@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Adding custom facts to puppet"
+date = "2011-10-04"
 
 +++
 

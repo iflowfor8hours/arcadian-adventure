@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Chef Testing Stratagies Compared"
+date = "2012-11-27"
 
 +++
 

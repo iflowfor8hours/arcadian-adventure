@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "List all installed packages on debian"
+date = "2011-09-26"
 
 +++
 

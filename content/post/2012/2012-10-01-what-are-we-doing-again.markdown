@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "What are we doing again?"
+date = "2012-10-01"
 
 +++
 

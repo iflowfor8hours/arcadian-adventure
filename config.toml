@@ -3,16 +3,15 @@ baseurl = "http://iflowfor8hours.info/"
 languageCode = "en-us"
 theme = "hugo-hikari-theme"
 
-
-  post = "/:year/:month/:day/:slug"
+post = "/:year/:slug"
 
 [params]
-  name = "Your name"
-  description = "Describe your website"
-  copyright = "POWERED BY [HUGO](//gohugo.io) - THEME: [HIKARI](//github.com/digitalcraftsman/hugo-hikari-theme) - © JOHN DOE"
+  name = "Matt Urbanski"
+  description = "devops webops and explosions."
+  copyright = "2015, matt urbanski"
 
   # Enable comments by entering your Disqus shortname
-  disqusshortname = "spf13"
+  # disqusshortname = "spf13"
   # Enable Google Analytics by entering your tracking code
   googleanalytics = ""
 
@@ -22,15 +21,14 @@ theme = "hugo-hikari-theme"
 
 [params.offcanvas]
   # Menu items
-  title = "Hi, I'm John Doe"
-  bio = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, pariatur!"
-  subscribe = "Subscribe"
-  followme = "Follow me on"
+  title = "matt urbanski"
+  bio = "systems automation, human, developer"
+  followme = "you can find me on the block in addition to"
 
   [[params.offcanvas.socialnetworks]]
     name = "Github"
-    url = "//github.com/spf13"
+    url = "//github.com/iflowfor8hours"
 
   [[params.offcanvas.socialnetworks]]
     name = "Twitter"
-    url = "//twitter.com/spf13"
+    url = "//twitter.com/iflowfor8hours"

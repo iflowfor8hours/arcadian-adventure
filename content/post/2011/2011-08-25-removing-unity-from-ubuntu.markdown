@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Removing Unity from Ubuntu"
+date = "2011-08-25"
 
 +++
 

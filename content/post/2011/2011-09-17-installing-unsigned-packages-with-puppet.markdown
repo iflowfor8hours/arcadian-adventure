@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Installing unsigned packages with puppet"
+date = "2011-09-17"
 
 +++
 

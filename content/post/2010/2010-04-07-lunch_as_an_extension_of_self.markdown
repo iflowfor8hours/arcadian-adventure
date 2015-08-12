@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Lunch As An Extension Of Self"
+date = "2010-04-07"
 
 +++
 

@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Home office transformation"
+date = "2011-09-17"
 
 +++
 

@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Leaving Atlanta The Agile Way"
+date = "2012-04-26"
 
 +++
 

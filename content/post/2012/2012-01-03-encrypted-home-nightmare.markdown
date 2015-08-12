@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Encrypted Home Directory Nightmare"
+date = "2012-01-03"
 
 +++
 

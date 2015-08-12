@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Puppet Vim Development Environment"
+date = "2011-08-25"
 
 +++
 

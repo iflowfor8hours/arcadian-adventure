@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Show Your localhost"
+date = "2011-08-25"
 
 +++
 

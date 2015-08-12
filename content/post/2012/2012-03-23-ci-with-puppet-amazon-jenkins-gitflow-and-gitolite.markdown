@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "CI with puppet, ec2, Jenkins, git-flow, Tomcat, and gitolite"
+date = "2012-03-23"
 
 +++
 

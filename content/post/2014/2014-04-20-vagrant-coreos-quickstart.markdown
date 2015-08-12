@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Vagrant, Jenkins, and CoreOS quickstart"
+date = "2014-04-20"
 
 +++
 

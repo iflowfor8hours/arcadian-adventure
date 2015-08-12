@@ -1,6 +1,7 @@
 +++
 layout = "single"
 title = "Wasting time with .vimrc"
+date = "2012-03-19"
 
 +++
 
