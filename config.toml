@@ -10,11 +10,7 @@ post = "/:year/:slug"
   description = "devops, automation, webops and explosions."
   copyright = "2015, matt urbanski"
 
-  # Enable comments by entering your Disqus shortname
-  # disqusshortname = "spf13"
-  # 7b68ee
-  # Enable Google Analytics by entering your tracking code
-  googleanalytics = ""
+  googleanalytics = "UA-22586140-1"
 
   # Links to newer/older blog posts
   newer = "Older"
