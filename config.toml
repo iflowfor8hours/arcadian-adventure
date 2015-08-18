@@ -40,5 +40,5 @@ post = "/:year/:slug"
     url = "//twitter.com/iflowfor8hours"
 
   [[params.offcanvas.socialnetworks]]
-    name = "My Presentations"
+    name = "Presentations and Published work"
     url = "//iflowfor8hours.info/presentations.html"
