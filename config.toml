@@ -1,9 +1,10 @@
 title = "iflowfor8hours.info"
-baseurl = "http://iflowfor8hours.info/"
+baseurl = "http://www.iflowfor8hours.info/"
 languageCode = "en-us"
 theme = "hugo-hikari-theme"
 
 post = "/:year/:slug"
+page = "/:slug"
 
 [params]
   name = "Matt Urbanski"
@@ -19,17 +20,16 @@ post = "/:year/:slug"
 [params.offcanvas]
   # Menu items
   title = "matt urbanski"
-  bio = "systems automation, human, developer"
+  bio = "systems automation, human, devops?, booze."
   followme = "you can find me on the block in addition to"
-	# subscribe = "Subscribe"
+
+  [[params.offcanvas.socialnetworks]]
+    name = "Email"
+    url = "mailto:matt@iflowfor8hours.info"
 
   [[params.offcanvas.socialnetworks]]
     name = "CV"
     url = "//www.iflowfor8hours.info/MattUrbanski.pdf"
-  
-  [[params.offcanvas.socialnetworks]]
-    name = "Email"
-    url = "mailto:matt@iflowfor8hours.info"
   
   [[params.offcanvas.socialnetworks]]
     name = "Github"
@@ -41,4 +41,8 @@ post = "/:year/:slug"
 
   [[params.offcanvas.socialnetworks]]
     name = "Presentations and Published work"
-    url = "//iflowfor8hours.info/presentations.html"
+    url = "//www.iflowfor8hours.info/page/presentations/"
+
+  [[params.offcanvas.socialnetworks]]
+    name = "Colophon and About Me"
+    url = "//www.iflowfor8hours.info/page/colophon/"
