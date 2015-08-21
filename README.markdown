@@ -1,7 +1,6 @@
 Blog at iflowfor8hours.info
 =====
 
-71edf360-27ef-0133-7378-3ef19dc5f2fb
 ![Build](https://www.codeship.io/projects/71edf360-27ef-0133-7378-3ef19dc5f2fb/status)
 
 This is my personal blog, generated with [hugo](https://gohugo.io/). Hosted on digital ocean.
