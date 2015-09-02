@@ -2,6 +2,7 @@ title = "iflowfor8hours.info"
 baseurl = "http://www.iflowfor8hours.info/"
 languageCode = "en-us"
 theme = "hugo-hikari-theme"
+canonifyurls = true
 
 post = "/:year/:slug"
 page = "/:slug"

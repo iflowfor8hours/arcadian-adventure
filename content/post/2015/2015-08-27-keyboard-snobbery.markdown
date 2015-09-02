@@ -1,6 +1,6 @@
 +++
 layout = "single"
-title = "Keyboard snobbery for the uninitiated Part 1"
+title = "Keyboards and how they work Part 1"
 date = "2015-08-27"
 
 +++
@@ -20,7 +20,7 @@ A keyboard is a matrix of switches attached to a microcontroller that polls the 
 
 To understand this more deeply we can model this on a hypothetical keyboard with 12 keys (switches). 
 
-![12 Key Schematic](/img/12keykeyboard.jpg)
+![12 Key Schematic](/12keykeyboard.jpg)
 
 That graphic came from [this PDF](http://nptel.ac.in/courses/Webcourse-contents/IISc-BANG/Microprocessors%20and%20Microcontrollers/pdf/Teacher_Slides/mod3/M3L7.pdf), but I don't know much about the material it came from.
 
@@ -34,12 +34,4 @@ There is a decent summary of some of this information in the [Wikipedia entry fo
 
 Thankfully, we don't use PS/2 or terminal keyboards in most cases anymore. Your keyboard is likely attached to the USB bus, even if it is on a laptop, and there are quite a few layers of abstraction between scancodes, keycodes, and your computer doing anything at all at this point.
 
-## So how does a USB keyboard work?
-
-Heading back towards the hardware we can think about the microcontroller in 3 discrete components: 
-
-* The scan module: This is what was discussed above, taking the state of the keys themselves and turning them into scancodes.
-
-* The translation module: This module of code takes the scancodes and maps them to USB-HID output codes, or whatever sort of output you might want like midi or physical interfaces. USB-HID being the most likely for keyboards is the one we will discuss now.
-
-* The output module: This sends signals to the device it is attached to over the protocol decided in the translation module. 
+We will follow up with a discussion of what happens next in a little while.
