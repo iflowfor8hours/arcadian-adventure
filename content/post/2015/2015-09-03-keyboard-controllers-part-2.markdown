@@ -21,4 +21,7 @@ The image below is from the great [Massdrop article](https://www.massdrop.com/ar
 
 ![Switches Diagram](/switches-diagram.png)
 
+## What is USB-HID?
 
+
+http://deskthority.net/workshop-f7/brownfox-step-by-step-t6050.html
