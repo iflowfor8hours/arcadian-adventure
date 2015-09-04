@@ -1,6 +1,6 @@
 +++
 layout = "single"
-title = "Keyboards and how they work Part 1"
+title = "Keyboards and how they work, an introduction"
 date = "2015-08-27"
 
 +++
