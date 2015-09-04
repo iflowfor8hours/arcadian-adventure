@@ -32,6 +32,6 @@ We can see this in the linux source code, in the [drivers/tty/vt/keyboard.c](htt
 
 There is a decent summary of some of this information in the [Wikipedia entry for scancodes](https://en.wikipedia.org/wiki/Scancode#PC_compatibles).
 
-Thankfully, we don't use PS/2 or terminal keyboards in most cases anymore. Your keyboard is likely attached to the USB bus, even if it is on a laptop, and there are quite a few layers of abstraction between scancodes, keycodes, and your computer doing anything at all at this point.
+Thankfully, we don't use PS/2 or terminal keyboards in most cases anymore. The USB-HID protocol allows for quite a bit of flexibility that would be impossible without a kernel recompile otherwise. Your keyboard is likely attached to the USB bus, even if it is on a laptop, and there are quite a few layers of abstraction between scancodes, keycodes, and your computer doing anything at all at this point.
 
 We will follow up with a discussion of what happens next in a little while.
