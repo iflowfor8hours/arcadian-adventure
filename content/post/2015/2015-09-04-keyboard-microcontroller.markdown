@@ -15,17 +15,34 @@ In this post I intend to explain more about how custom controllers like [Soarer'
 
 ## Keyboard Switches
 
-Keyboard switches are a contentious and seemingly deep topic of discussion. Luckily for us, most of the contention is around preference and minor variations in feel. Most mechanical switches themselves work in nearly the same way. For an in-depth look at just about everything you need to know about switches, check out the excellent [Introduction to Cherry MX mechanical switches](www.keyboardco.com/blog/index.php/2012/12/an-introduction-to-cherry-mx-mechanical-switches/). There are excellent animated gifs there like the one below.
+Keyboard switches are a contentious and seemingly deep topic of discussion. Luckily for us, most of the contention is around preference and variations in feel. Most mechanical switches themselves work in nearly the same way. For an in-depth look at just about everything you need to know about switches, check out the excellent [Introduction to Cherry MX mechanical switches](www.keyboardco.com/blog/index.php/2012/12/an-introduction-to-cherry-mx-mechanical-switches/). There are excellent animated gifs there like the one below. They explain the inner workings and physical properties of the feel of keyboard switches.
 
 ![clear switch](/Clear.gif)
 
-That gif is an image of a Cherry MX Clear switch, and it shows what is going on inside the switch. There are only really two components in the switch that matter for the actuation. In that image, the plastic part in between the folded metal piece on the left side of the image is of the switch is the actuator. The leaf is the metal bit which is the actual switching mechanisim inside the switch. There is a good wiki post on this [on Deskauthority](http://deskthority.net/wiki/Switch_terminology).
+That gif is an image of a Cherry MX Clear switch, and it shows what is going on inside the switch. There are only really two components in the switch that matter for the actuation. In that image, the plastic part in between the folded metal piece on the left side of the image is of the switch is the actuator. The leaf is the moving metal bit which controls the contact and continouity of the current moving through the switch. 
+When the actuator drops, the leaf of the switch touches the steam momentarialy and continuity is restored. You then get a KeyPress event. When your finger leaves the switch and the actuator separates the leaf again, there is a KeyRelease event. There is a good wiki post on this [on Deskauthority](http://deskthority.net/wiki/Switch_terminology).
 
 There is also the outstanding post on the [WASD website](http://www.wasdkeyboards.com/mechanical-keyboard-guide) which explains the differences in switches, mounting, and their actuation. You should breeze through that as well. 
 
-The switches wired in a matrix configuration as shown below and discussed further in the following section. In the gif, the 'A' key is pressed, as the switch is in the closed state, signaling to the microcontroller that the key has been pressed.
+What is important to understand is that the switches themselves are just that. Momentary contact switches. Their objective is to momentarily allow the flow of current of a circuit using the actuator to connect the leaf and stem and to indicate when it has made contact. The release of the button shold break that contact.
+
+Bear in mind this is soley talking about mechnical keyboard switches, as there are many other ways to indicate this to a circuit.
+
+The switches in a keyboard are wired in a matrix configuration as shown below. This means in serial, one switch after the next, on the same bus as the previous. In the gif, the "A" key is pressed, as the switch is in the closed state, signaling to the microcontroller that the key has been pressed. There is a bit of knowledge one needs to have about muxing and diodes, and how they work to fully understand how a one could have a controller with fewer pins than switches could accurately represent the states of all the switches, all the time.
 
 ![switch matrix](/switchinternal.gif)
+
+## Down the rabbit hole with diodes
+
+Let us have a look at our hypothetical diagram above, and pretend we have a keyboard with these four switches, ["A", "B", "C", "D"]. If A, D and B are pressed at the same time, the entire circuit is complete, and despite not pressing it, the C switch goes hot. The diagram below illustrates that. The reason this happens is because the current is flowing in both directions when the circuit is complete on either side, due to the nature of it being wired in serial.
+
+![all switches hot ghosting effect](/everythinghot.gif)
+
+The purpose of a diode is to ensure that electrical current can only flow in one direction. A diode will block the current from flowing up the unintended leg of another simultenious or near simultenious keypress, as illustrated in the circuit below.
+
+![n key rollover with diodes](/nkro.gif)
+
+Mind you, these diagrams were made by [Manyak] on the overclockers.net forum](http://www.overclock.net/t/491752/official-mechanical-keyboard-guide). It is a great resource. RIP forums as the source of all the worlds' knowledge.
 
 ## Keyboard Hardware and Internals
 
@@ -34,7 +51,7 @@ If the [schematic](/12keykeyboard.jpg) in the previous part was not very helpful
 First, he wired the switches in rows, using diodes.
 ![Detail of rows of switches](/rowsdetail.jpg)
 
-As you can see from further away, they are wired in serial and don't terminate anywhere yet.
+As you can see from further away, they are wired in serial and do not terminate anywhere yet.
 ![Rows fully wired](/rows.jpg)
 
 Next, the columns were wired up, also in serial. He used insulation to keep the vertical wires from touching the exposed wiring of the diode legs. He passed the wiring underneath to keep it neat and easily debuggable if something went wrong.
@@ -68,4 +85,4 @@ This topic can be researched quite easily if you are interested by reading the [
 
 ## Conclusion
 
-Those are the essential hardware components of any keyboard. Some switches, a wiring matrix and a controller. We'll have more detail on how the controller software works in the next post.
+Those are the essential hardware components of any keyboard. Some switches, a wiring matrix and a controller. We will have more detail on how the controller software works in the next post.
