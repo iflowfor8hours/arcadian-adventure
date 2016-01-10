@@ -18,6 +18,9 @@ page = "/:slug"
   newer = "Older"
   older = "Newer"
 
+  pageNotFoundTitle = ""
+  pageNotFoundSubtitle = ""
+
 [params.offcanvas]
   # Menu items
   title = "matt urbanski"
