@@ -10,7 +10,7 @@ page = "/:slug"
 [params]
   name = "Matt Urbanski"
   description = "devops, automation, webops and explosions."
-  copyright = "2015, matt urbanski"
+  copyright = "2016, matt urbanski"
 
   googleanalytics = "UA-22586140-1"
 
