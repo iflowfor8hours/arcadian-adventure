@@ -13,7 +13,7 @@ tags = [
 
 * What clients want
 
-Often times I find myself working with a client where they are determined to accelerate development, and feel they need a build and deployment pipeline. Development teams need a pipeline that automatically runs tests, runs builds, maintains artifacts, configures applications, and manages deployments and promotions through their environments. Other requirements creep in such as tracking bugs and releases, integrating operational metrics from the application, adding business metrics around revenue or market events, and tracing static quality or other characteristics from their version control system or other sources, but the core functionality of the pipeline is ensuring artifacts go from environment to environment reliably and repeatably. 
+Often times I find myself working with a client where they are determined to accelerate development, and feel they need a build and deployment pipeline. Development teams need a pipeline that automatically runs tests, runs builds, maintains artifacts, configures applications, and manages deployments and promotions through their environments. Other requirements creep in such as tracking bugs and releases, integrating operational metrics from the application, adding business metrics around revenue or market events, and tracing static quality or other characteristics from their version control system or other sources, but the core functionality of the pipeline is ensuring artifacts go from environment to environment reliably and repeatably so that risk can be reduced. 
 
 Many companies design their pipelines around their development environment, citing specifics about their processes or technologies that require attention, and scope creep begins to happen from the very inception.
 
@@ -45,8 +45,11 @@ More generic methods are considered to express these relationships as systems be
 
 The widespread use of containers and microservices has greatly accelerated this trend far past the humble beginnings of Heroku's 12 factor app philosophy. This pushes operational complexity further away from the developer and onto the operations team to have service discovery working, autoscaling available, and data layers well-abstracted. A very high level of maturity is required for this to work, let alone to begin paying dividends.
 
-Meanwhile, back on earth, our developer still struggles to run some new code in a prod-like environment and then forget about it when she is done doing whatever she needed it for. The level of mental engagement and knowledge required for the tooling to get out of the way has already tanked the project, before the cost and the scope creep even had a chance. The object of the pipeline was to accelerate development, not to build a devops cathedral out of lofty concepts and generic software.
+Meanwhile, back on earth, our developer still struggles to run some new code in a prod-like environment and then forget about it when she is done doing whatever she needed it for. The level of mental engagement and knowledge required for the tooling to get out of the way has already tanked the project, before the cost and the scope creep even had a chance. The object of the pipeline was to accelerate development, not to build a devops cathedral out of lofty concepts and generic, well-tested software.
 
-What I see as the ideal after building a ton of these
+What should I use then?
 
-Changing development workflows
+The idea that I come back to almost every time I think about how to balance these things is a calculus of desire, understanding, and money. The desire to learn and use the tools and frameworks to make this possible, combined with the understanding of the opposite side of the hall's pains, backed by the neverending substrate of budgetary and business limitations. I want to define that equation as equal to devempathy.
+
+![dolla dolla billz yall]
+- Kent McNeil
