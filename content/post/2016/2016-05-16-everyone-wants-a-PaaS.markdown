@@ -11,8 +11,6 @@ tags = [
 
 +++
 
-* What clients want
-
 Often times I find myself working with a client where they are determined to accelerate development, and feel they need a build and deployment pipeline. Development teams need a pipeline that automatically runs tests, runs builds, maintains artifacts, configures applications, and manages deployments and promotions through their environments. Other requirements creep in such as tracking bugs and releases, integrating operational metrics from the application, adding business metrics around revenue or market events, and tracing static quality or other characteristics from their version control system or other sources, but the core functionality of the pipeline is ensuring artifacts go from environment to environment reliably and repeatably so that risk can be reduced. 
 
 Many companies design their pipelines around their development environment, citing specifics about their processes or technologies that require attention, and scope creep begins to happen from the very inception.
@@ -27,7 +25,7 @@ When these questions and you don't yet have anything deployed, I would caution t
 
 The purpose of a pipeline is to continuously deliver high-quality software. As the complexity of the software or number of components increases, the CI pipeline should not add additional complexity, but save on complexity by having and established and repeatable path to production. It is also a powerful tool for maintaining the discipline and health of the project.
 
-* What we wind up building *
+* What we wind up building
 
 The thought process and desire for building a PaaS often stems from the technology side of the business, looking to decrease the entropy in environments. Usually the effort to centralize configurations is driven by a desire for more flexibility, scalability, easier of administration, a migration to a public cloud platform, or a combination of those reasonable justifications. As applications become configuration-managed using chef, ansible, or puppet, and environments in consul or something similar, the amount of source code and software that the organization must wrestle with and control balloons. New terminolgy is introduced, new environments are comissioned and named, and tools take the place of manual processes, a natural separation starts to occur between people who understand the point of this, and those who see the new measures as needless and frustrating impediments to getting things done.
 
@@ -49,7 +47,13 @@ Meanwhile, back on earth, our developer still struggles to run some new code in 
 
 What should I use then?
 
-The idea that I come back to almost every time I think about how to balance these things is a calculus of desire, understanding, and money. The desire to learn and use the tools and frameworks to make this possible, combined with the understanding of the opposite side of the hall's pains, backed by the neverending substrate of budgetary and business limitations. I want to define that equation as equal to devempathy.
+The idea that I come back to almost every time I think about how to balance these things is a calculus of desire, understanding, and money. The teams' desire to learn and use the tools and frameworks to make this possible, combined with their understanding of the opposite side lane's pains, backed by the neverending substrate of budgetary and business limitations. I want to define that equation as devempathy.
 
 ![dolla dolla billz yall]
 - Kent McNeil
+
+"A blow from not so long ago."
+
+On a project level, deliver what you promised first, then worry about squeezing all that you can out of the pipeline itself. Build a solid and reliable path to as close to production you can get using a pattern that will make sense no matter what. Instead of that pattern being something complicated and specific to technologies and tools, make a simple one. The one I use is that every application will have an endpoint `appname.environment/health` that will return a 200 along with some environment configuration JSON. Take that application all the way through build, test, and deployment before you start worrying about the finer things like business metrics and congrolling your environment.
+
+In the end only maximize portability if your application is designed to run on your multi tenant schedluer, and maximize simplicity
