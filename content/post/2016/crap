@@ -6,3 +6,9 @@ On a project level, deliver what you promised first, then worry about squeezing 
 
 "A blow from not so long ago."
 
+More generic methods are considered to express these relationships as systems become more complex to reason about. The culmination of this idea is in travis and codeship-style build and deployment tools, which execute whatever is in the entrypoint file and often continuously deploy the built artifacts. Systems such as this lack knowledge about anything other than the localized build. A single-paradigm web application developer's wet dream. Few of the ideal-world advantages of a pipeline are realized in this implementation, but they are all available, just a shell script or untested block of code in a YAML file away.
+
+The thought process and desire for building a PaaS often stems from the technology side of the business, looking to decrease the entropy in environments. Usually the effort to centralize configurations is driven by a desire for more flexibility, scalability, easier of administration, a migration to a public cloud platform, or a combination of those reasonable justifications. As applications become configuration-managed using chef, ansible, or puppet, and environments in consul or something similar, the amount of source code and software that the organization must wrestle with and control balloons. New terminolgy is introduced, new environments are comissioned and named, and tools take the place of manual processes, a natural separation starts to occur between people who understand the point of this, and those who see the new measures as needless and frustrating impediments to getting things done.
+
+    "How will we control the version of libraries in our build and deployment environments?"
+
