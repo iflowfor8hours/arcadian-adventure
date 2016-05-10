@@ -1,0 +1,8 @@
+
+On a project level, deliver what you promised first, then worry about squeezing all that you can out of the pipeline itself. Build a solid and reliable path to as close to production you can get using a pattern that will make sense no matter what. Instead of that pattern being something complicated and specific to technologies and tools, make a simple one. The one I use is that every application will have an endpoint `appname.environment/health` that will return a 200 along with some environment configuration JSON. Take that application all the way through build, test, and deployment before you start worrying about the finer things like business metrics and congrolling your environment.
+
+![dolla dolla billz yall]
+- Kent McNeil
+
+"A blow from not so long ago."
+
