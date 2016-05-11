@@ -1,0 +1,6 @@
+box: golang
+build:
+  steps:
+    - arjen/hugo-build:
+        theme: hugo-hikari-theme
+        flags: --buildDrafts=true
