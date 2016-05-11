@@ -12,3 +12,8 @@ The thought process and desire for building a PaaS often stems from the technolo
 
     "How will we control the version of libraries in our build and deployment environments?"
 
+The same thinking beings to creep in, putting the cart far before the horse in terms of customer need. Although building a pipeline is almost always initially a *cost* center, that does not mean that it cannot deliver value incrementally.
+
+The idea that I come back to almost every time I think about how to balance these things is a calculus of desire, understanding, and money. The teams' desire to learn and use the tools and frameworks to make this possible, combined with their understanding of the opposite side lane's pains, backed by the neverending substrate of budgetary and business limitations. 
+
+Meanwhile, back on earth, our developer still struggles to run some new code in a prod-like environment and then dispose of that environment. The level of mental engagement and knowledge required for the tooling to get out of the way has already caused great discouragement. The object of the pipeline was to accelerate development, not to build a cathedral out of lofty concepts and generic, well-tested software.

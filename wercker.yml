@@ -1,0 +1,6 @@
+box: debian
+build:
+  steps:
+    - arjen/hugo-build@1.9.2
+        version: "0.15"
+        theme: hugo-hikari-theme
