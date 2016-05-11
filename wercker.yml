@@ -4,3 +4,11 @@ build:
     - arjen/hugo-build:
         theme: hugo-hikari-theme
         flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - iflowfor8hours/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: iflowfor8hours.github.io/iflowfor8hours.info
+        basedir: public
