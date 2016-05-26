@@ -1,7 +1,7 @@
 +++
 layout = "single"
 title = "The path to production and overengineering"
-date = "2016-05-06"
+date = "2016-05-26"
 tags = [
   "pipelines",
   "CD",
