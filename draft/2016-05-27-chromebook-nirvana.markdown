@@ -40,7 +40,7 @@ The first laptop I ever used was a {{WHAT WAS IT?}}. I played The Secret of Monk
 
 ### Learning about the guts of the boxes
 
-Noting my interest in computers, in 4th grade my mother bought me what I now know to be a $5000, 4 week summer course in which we ordered a dell computer, and I hung out with a lady at the FutureKids center on {{ ADDRESS of FUTUREKIDS }} and she helped me take the whole thing apart, explaning everything to me, piece by piece. I learned about hard drives, ISA cards, RAM, SCSI (I didn't have it), IDE, on-board PC speaker vs SoundBlaster sounds, and everything else while we took it apart. Every day I was pining for the time I went to camp, even going so far as to watch richard scary's smalltown, which I hated, just because it passed the time right before I could meet up with Michelle, the love of my life. We put the computer back together in the same slow pace, quizzing me and joking around with me, and building my confidence in what I knew and didn't know.
+Noting my interest in computers, in 4th grade my mother bought me what I now know to be a $5000, 6 week summer course in which we ordered a dell computer, and I hung out with a lady at the FutureKids center on {{ ADDRESS of FUTUREKIDS }} and she helped me take the whole thing apart, explaning everything to me, piece by piece. I learned about hard drives, PCI and ISA cards, RAM, SCSI (I didn't have it), ATA, IDE, on-board PC speaker vs SoundBlaster sounds, and everything else while we took it apart. We pulled everything out of the case and touched every part, learning more by seeing and touching the hardware. Every day I was pining for the time I went to camp, even going so far as to watch richard scary's smalltown, which I hated, just because it passed the time right before I could meet up with Michelle, the love of my life. We put the computer back together in the same slow pace, quizzing me and joking around with me, and building my confidence in what I knew and didn't know.
 
 After dell was back together, we installed DOS on it. She taught me the boot order, how the computer looked for a sector, and why the sounds coming from the machine came from the floppy first, the high pitched one, then a low pitched one, the HDD, then a click, then a beep. 
 I was in heaven. This woman was so cool and so pretty to me, and she taking the next month off to cycle from NYC to California. For no reason. 
@@ -52,13 +52,13 @@ After installing DOS, we moved on to windows, and then to installing other softw
 
 ### ThinkPad first love
 
-My first real laptop, meaning which I had sole ownership and agency over andwhich I had convinced myself to "get work done" was a {{ Thinkpad tiny one }} with an external floppy drive. It was given to me by my mother when she resigned from her job and they let her keep her work machine. It was loaded with Lotus Notes, Windows NT4, and a host of other software I could not have given a shit less about, but kept around just in case. At that time, I was programing in QBASIC, tearing it up in Norton Commander, playing LucasArts games, and pirating PSX games and CDs with the help of an enormous cd burner via my PCMCIA SCSI interface. This was my most prized possession, as it was the source of my young income and literally the coolest thing I had ever seen.
+My first real laptop, meaning which I had sole ownership and agency over and which I had convinced myself to "get work done" was a {{ Thinkpad tiny one }} with an external floppy drive. It was given to me by my mother when she resigned from her job and they let her keep her work machine. It was loaded with Lotus Notes, Windows NT4, and a host of other software I could not have given a shit less about, but kept around just in case I was secretly a business person. At that time, I was programing in QBASIC, tearing it up in Norton Commander, playing LucasArts games, and pirating PSX games and CDs with the help of an enormous cd burner via my PCMCIA SCSI interface. This was my most prized possession, as it was the source of my young income and literally the coolest thing I had ever seen.
 
 TODO: Determine what the history actually was, noting that you did havea PCMCIA 33.6 modem at one point, and an ethernet card with an orange interface when you turned 16. I believe that is when the PowerBook G4 came out and you flip flopped for a few years.
 
 {{ tech specs and photos of thinkpad }}
 
-The defining moment in the relationship between myself and the ThinkPad brand was when I was in my aunts house, looking at porn on my laptop, in a heightened state of alert because everyone was home and downstairs. I think my aunt called me from downstairs, and in a frenzy I closed the windows with the images in it, and ran down the stairs holding my laptop in one hand and the bannister in the other. At the top of the stairs I stopped to think if I had closed _all_ of the things I didn't want anyone to see, and the computer slipped out of my hand. The next few seconds happened in unforgettable {{ HOW OLD MIND }} slow motion. I watched the computer fly out of my hand and cartwheel down the stairs, hitting one after another on different corners and gaining momentum untill eventually coming to rest at the landing after slamming into the wall right above the dog bed. The whole house heard it and thought I had fallen or something because I unconciously gave a painstaking squeal as the clamour echoed. The sounds it made were akin to the metallic and unmistakably mechanical crash of an expensive 35mm SLR slamming onto the hard, smooth, polished floor of the baggage claim area as an overtired father leans down to pick up an equally distressed screaming child, forgetting that the olympus with new zoom lens is dangling from his neck. Heartbreaking. Expensive. Utterly world-crushing and ultimately irrepariable.
+The defining moment in the relationship between myself and the ThinkPad brand was when I was in my aunts house, looking at porn on my laptop, in a heightened state of alert because everyone was home and downstairs. My aunt called me from downstairs to do something for her, and in a frenzy I closed the windows with the images open in it, and ran down the stairs holding my laptop in one hand and the bannister in the other. At the top of the stairs I stopped to think if I had closed _all_ of the things I didn't want anyone to see, and the computer slipped out of my hand. The next few seconds happened in unforgettable {{ HOW OLD MIND }} slow motion. I watched the computer fly out of my hand and cartwheel down the stairs, hitting one after another on different corners and gaining momentum untill eventually coming to rest at the landing after slamming into the wall right above the dog bed. The whole house heard it and thought I had fallen or something because I unconciously gave a painstaking squeal as the clamour echoed. The sounds it made were akin to the metallic and unmistakably mechanical crash of an expensive 35mm SLR slamming onto the hard, smooth, polished floor of the baggage claim area as an overtired father leans down to pick up an equally distressed screaming child, forgetting that the olympus with new zoom lens is dangling from his neck. Heartbreaking. Expensive. Utterly world-crushing and ultimately irrepariable.
 
 {{ Insert pic of stairs at kathleens house }}
 
@@ -72,13 +72,18 @@ My family was now watching my face swell up with sadness and fear, and stayed qu
 
 To say I was relieved would be cheating you. I was truly elated and relieved. This was little Alex on his marathon sex with the record shop girl, the sound of beethoven's 5th and pure victory and oneness, combined with ultraviolence and invincibility. This was IDDQD and IDSPISPOPD and a confusing wet dream at the same time. I was not only invincible but invisible, as my family did not find out about my girlsgirlsgirls directory and the computer survived the fall. My ThinkPad and I had defeated God himself. Confusing rubbing and grainy BMPs and my family never knew.
 
+Interestingly, a previous experience in 3rd grade had already caused me to embrace atheism. An incident involving my 286dx desktop where I removed the memory from the motherboard and then because it was bedtime had to hastily re-assemble the computer before my babysitter saw what had happend led me to pray all night for god to put the memory back and I would never do it again.
+
+The following morning I was an atheist and a troubleshooter. 
 
 {{ beethoven's 5th moment }}
 
 I was an evangelist from that point forward. All I wanted were thinkpads from then on. There was no doubt in my mind that every laptop I would own ever again was a thinkpad, in the same form factor, and it would treat me just as well.
 
-#### Crime bosses of Tony Hawks pro skater and FIFA 98, the funk soul brothers
+#### Crime bosses of Tekken 3, MGS, FIFA 98 the funk soul brothers
 #### Blinded by the light
+
+TODO: Clean this paragraph up chronologically. 
 
 I moved back from London at 16, to start my Sophomore year in The New York City Public School system. Coming from international school, this was a shock, but I was returning with considerable savings from some savvy investing in a CD burner that my friends and I pooled money to get so that we could chip PSX consoles and burn games for a profit. We were killing it on the DreamCast market too because you didn't need to chip those, you just needed the {{ boot CD thing }} to play pirated games. 
 
@@ -86,7 +91,7 @@ I moved back from London at 16, to start my Sophomore year in The New York City 
 
 My school had a T3 connection in the library, and my friend Zac and I used an MS Word exploit we thought to have discovered to install Napster and Usenet Clients to download ISOs at school, then bring them home on IOmega jaz tapes to burn and flip for 10 quid each. The exploit was that you could use URLs in word documents to link to local media, and PCs in the library did not have the floppy drives locked down, so we could get a command prompt, or execute NC (Yes, I'm still using this) directly from a floppy and gain full control of the box.
 
-{{ Zac and I in 8th grade }}
+{{ Zac and I in 8th grade photo }}
 
 While most of our money went to a store in Camden called OddBalls because we liked juggling and yo-yos, I saved quite a bit of it and when I moved back to the states made the first big purchase in my short life since my Neo-Geo CD console, which clocked in at 160 GBP.
 
@@ -120,11 +125,11 @@ Beacon had color printers that students could use, and a few Macs in the lab tha
 
 {{ Holotape roll photo }}
 
-I started making IDs and selling them for $25, with absolutely no warranty whatsoever. When they were confiscated, people simply stopped going to that deli in the neighborhood, and eventually they were accepted when I got the John Jay College of Criminal Justice template down pat, as that was right next door to Beacon.
+I started making IDs and selling them for $25, with absolutely no warranty whatsoever. When they were confiscated, people simply stopped going to that deli in the neighborhood, and eventually they were accepted when I got the John Jay College of Criminal Justice template down pat, as that was right next door to Beacon. Nearby stores accepted John Jay IDs with no problem, even for beer. 
 
 {{ john jay ID }}
 
-I moved on to buying Mini-thins and Stacker II's (ha! the Stacker III's were for idiots, post-ephedrine ban) in bulk, online and selling those too. Ephedrine was like cocaine to 15 year olds, and the drug experimenting population (everyone) in my school were about it, myself very much included. I lost all my weight by starting a onstop DDR career of whipping korean kids asses at Chinatown Fair, sweating like a madman from the mini-thins and stackers I was always on. 
+I moved on to buying Mini-thins and Stacker II's (ha! the Stacker III's were for idiots, post-ephedrine ban) in bulk, online and selling those too. Ephedrine was like cocaine to 15 year olds, and the drug experimenting population (everyone) in my school were about it, myself very much included. I lost all my weight by starting a onstop DDR career of whipping korean kids asses at Chinatown Fair, sweating like a madman from the mini-thins and stackers I was always on. Since arcades were more popular in the UK than in the US, I had a 2 year head start on the DDR playing population. By the time it arrived at chinatown fair, I had mastered beatmania, killed first and second mix of DDR, and was playing paranoia-180 on expert. Swag.
 
 {{ chinatown fair }}
 
@@ -142,9 +147,9 @@ All of these things that I knew I could get on usenet, [hotwire](), or elsewhere
 
 Eventually, I was kicked out of High School for various reasons, including truancy, smoking, drinking, and all the usual reasons many many young men don't make it through their teenage years without a few significant detours.
 
-#### 
+#### A lul in the boring world of military intelligence
 
-I left New York and joined the army, and being stationed in El Paso, Texas. Not much of interest for this story happened here, although I did continue selling bootleg games, I had other interests, and a desktop PC that I played Masters of Orion on constantly. My focus was  squarely on the thighs, lips, and hips of a certain lady at the time.
+I left New York and joined the army, and was stationed in El Paso, Texas after basic and AIT in Georgia. Not much of interest for this story happened here, although I did continue selling bootleg games, I had other interests and a desktop PC that I played Masters of Orion on constantly. My focus was squarely on the love, thighs, lips, and hips of a certain lady I met in high school. I also started getting a salary and spending it on tattoos, so my desire for money was greatly reduced.
 
 {{ pic of nora and I making out }}
 
