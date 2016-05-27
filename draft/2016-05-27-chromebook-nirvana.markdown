@@ -14,12 +14,17 @@ tags = [
 
 TODO: Make a timeline, illustrated?
 
-
 This post is a long highly personal and autobigraphical about my emotional relationship with laptops. some personal and probably irrelevant choices to you, regarding the history of computers I have owned. The result of which is that I now have a Chromebook Pixel 2, running GalliumOS, and it is the best computing experience I have had up to this point. My position is slanted and unfair, and on top of that, I'm a linux user. If you are not interested in ThinkPads, linux as a daily driver, or the Chromebook Pixel, this is going to be very very boring.
+
+#### Mobility smells like children
 
 My history with desktops is very different and far more common, so I've left a lot of it out. Assume that in the gaps between laptops, I had some sort of desktop, and my first computer was certainly a IBM PC baby AT with a CGA display. However, laptops are special to me. Even as a child I travelled a lot on planes. My first flight carrying a computer  was in 1991, at 6 years old and have not since stopped travelling or carrying a laptop. We flew a lot as a family because my mother travelled for work close to 9 months out of the year, and frequently she took us with her. In the summer, we would fly to Vegas to stay with my family there, so my mother could travel for work. During those summers my sister and I would fly unacommpanied minor style to go meet her in places where she had to stay for a week or more to visit with us on weekends.
 
-{{ when was the TSA formed? }} We would fly and I would carry the computer because I was the most interested in it. I was always afraid of the supposed magnets in the x-ray machines destroying my computer, so I insisted that they check my computer by hand and not run it through the scanner. The test to check if it was a bomb or not, was the often amused **airline** security guard would ask the 6 year old with the laptop to kindly turn it on and show that something showed up on the screen. This meant booting it, and wasting precious battery life, of which there was only around 18 minutes of on my first one. Upon the bios appearing on the screen, the guard would then wave me on with some comment about how cute or weird it was that I had a computer to my mother or me, and let out a laugh about how I must be really important, or from Wall Street, in New York, New York, the Big Apple! A place where many people had never been and thought of as very exotic I learned very quickly.
+{{ six year old me }}
+
+{{ when was the TSA formed? }} 
+
+We would fly and I would carry the computer because I was the most interested in it. I was always afraid of the supposed magnets in the x-ray machines destroying my computer, so I insisted that they check my computer by hand and not run it through the scanner. The test to check if it was a bomb or not, was the often amused **airline** security guard would ask the 6 year old with the laptop to kindly turn it on and show that something showed up on the screen. This meant booting it, and wasting precious battery life, of which there was only around 18 minutes of on my first one. Upon the bios appearing on the screen, the guard would then wave me on with some comment about how cute or weird it was that I had a computer to my mother or me, and let out a laugh about how I must be really important, or from Wall Street, in New York, New York, the Big Apple! A place where many people had never been and thought of as very exotic I learned very quickly.
 
 Thankfully I was awkward and shy and could just blush and close it up and get on with moving to my gate and begin thinking like a janitor to find a place to plug in. Very few people at this technology drought moment in time had portable electronics they carried around everywhere and were concerned about electricity. 
 
@@ -65,11 +70,84 @@ My family was now watching my face swell up with sadness and fear, and stayed qu
 
 {{ INSERT IMAGE HERE OF NESTED DIR IN NC }}
 
-To say I was relieved would be cheating you. I was truly elated and relieved. I was an evangelist. This was little Alex on his marathon sex with the record shop girl, the sound of beethoven's 5th and pure victory and oneness, combined with ultraviolence and invincibility. This was IDDQD and IDSPISPOPD and a confusing wet dream at the same time. My ThinkPad and I had defeated God himself.
+To say I was relieved would be cheating you. I was truly elated and relieved. This was little Alex on his marathon sex with the record shop girl, the sound of beethoven's 5th and pure victory and oneness, combined with ultraviolence and invincibility. This was IDDQD and IDSPISPOPD and a confusing wet dream at the same time. I was not only invincible but invisible, as my family did not find out about my girlsgirlsgirls directory and the computer survived the fall. My ThinkPad and I had defeated God himself. Confusing rubbing and grainy BMPs and my family never knew.
+
 
 {{ beethoven's 5th moment }}
 
+I was an evangelist from that point forward. All I wanted were thinkpads from then on. There was no doubt in my mind that every laptop I would own ever again was a thinkpad, in the same form factor, and it would treat me just as well.
 
-I had a PCMCIA ethernet card though, so when I could go to my mother's office, or later, 
+#### Crime bosses of Tony Hawks pro skater and FIFA 98, the funk soul brothers
+#### Blinded by the light
 
-when you hear someone at an airport drop a 
+I moved back from London at 16, to start my Sophomore year in The New York City Public School system. Coming from international school, this was a shock, but I was returning with considerable savings from some savvy investing in a CD burner that my friends and I pooled money to get so that we could chip PSX consoles and burn games for a profit. We were killing it on the DreamCast market too because you didn't need to chip those, you just needed the {{ boot CD thing }} to play pirated games. 
+
+{{ Spinning dog logo disc }} 
+
+My school had a T3 connection in the library, and my friend Zac and I used an MS Word exploit we thought to have discovered to install Napster and Usenet Clients to download ISOs at school, then bring them home on IOmega jaz tapes to burn and flip for 10 quid each. The exploit was that you could use URLs in word documents to link to local media, and PCs in the library did not have the floppy drives locked down, so we could get a command prompt, or execute NC (Yes, I'm still using this) directly from a floppy and gain full control of the box.
+
+{{ Zac and I in 8th grade }}
+
+While most of our money went to a store in Camden called OddBalls because we liked juggling and yo-yos, I saved quite a bit of it and when I moved back to the states made the first big purchase in my short life since my Neo-Geo CD console, which clocked in at 160 GBP.
+
+{{ OddBalls }}
+
+#### How Steve Jobs and Apple Envy turned me into a criminal empire, slinging drugs, bootlegging cigarettes, fake ID, and all-out craigslist hustling
+
+{{ Powerbook G4 }}
+
+Need I say more?
+
+OSX launched to the world not really giving a shit. I did. I knew what unix was. I knew that there was no way I could run linux or freebsd on a laptop and still have a browser and a usenet client that worked, and would hibernate when I closed the lid, and wake up when I openend it. I took a single look at the Titanium Powerbook G4 and knew I needed one. By any means necessary.
+
+{{ 16 year old me in NY }}
+
+{{ Danny's tobacco logo }}
+
+I had already started smoking in year 8, since in the UK a tall 14 year old can buy cigarettes and booze without a problem. I quickly learned this was not the case in New York and formulated a plan to kill two birds with one stone. Smoke cigarettes, buy booze, and make enough money to realize my desire for a PowerBook G4.
+
+By the way, week one of me being in a new high school in midtown was this:
+
+{{ 9/11 photos }}
+
+We lived in midtown so it was not like it happened on top of my school, but needless to stay, it was a unique way to start my first week of 10th grade, when I was "the weird british kid" in a new school, having moved back to NYC less than a week prior. I didn't know anyone, and I missed my lahdan town home and rudebwoy 2-step speed garage. I was heavily invested in that, and was not giving my identity up just yet.
+
+Students in my school were constantly looking for deli's that would sell us cigarettes under the table, knowing we were FAR under age. I quickly learned that I could buy cigarettes online and flip them for $5/pack. My status became "the british accent kid from midtown with the $5 packs". It didn't hurt that a pack of newports went up to $6 just after 9/11.
+
+{{ Beacon High schjool photo }}
+
+Beacon had color printers that students could use, and a few Macs in the lab that had Photoshop on them. My solution to our booze and smokes challenge was making college IDs. I bought lamination pockets from staples, told people to bring me passport photos from a booth, and got a roll of the most valuable material known to fake ID producers under the age of 21. Holotape.
+
+{{ Holotape roll photo }}
+
+I started making IDs and selling them for $25, with absolutely no warranty whatsoever. When they were confiscated, people simply stopped going to that deli in the neighborhood, and eventually they were accepted when I got the John Jay College of Criminal Justice template down pat, as that was right next door to Beacon.
+
+{{ john jay ID }}
+
+I moved on to buying Mini-thins and Stacker II's (ha! the Stacker III's were for idiots, post-ephedrine ban) in bulk, online and selling those too. Ephedrine was like cocaine to 15 year olds, and the drug experimenting population (everyone) in my school were about it, myself very much included. I lost all my weight by starting a onstop DDR career of whipping korean kids asses at Chinatown Fair, sweating like a madman from the mini-thins and stackers I was always on. 
+
+{{ chinatown fair }}
+
+When I finally stacked enough paper, I bought a glorious 400mhz TiBook, a FireWire 4x cd burner in an external enclosure, and a FireWire HDD in an enclosure. It was on. I had a plan to recover the money I spent on it quickly.
+
+Since I was an early adopter, and I quiclky learned that 9.2 applications didn't work at all in OSX, people needed software. 
+
+Office. 
+Adobe Photoshop. 
+Final Cut. 
+Cubase.
+Pro Tools.
+
+All of these things that I knew I could get on usenet, [hotwire](), or elsewhere. I saw the opportunity and ran with it. I started cutting school and became addicted to the hustle of going to people's houses on craigslist and "upgrading" their new macs with software they wanted. I even sold a compliation DVD with documentation and a script that I wrote for $25 that had all the common stuff people wanted, cracked and ready to install. 
+
+Eventually, I was kicked out of High School for various reasons, including truancy, smoking, drinking, and all the usual reasons many many young men don't make it through their teenage years without a few significant detours.
+
+#### 
+
+I left New York and joined the army, and being stationed in El Paso, Texas. Not much of interest for this story happened here, although I did continue selling bootleg games, I had other interests, and a desktop PC that I played Masters of Orion on constantly. My focus was  squarely on the thighs, lips, and hips of a certain lady at the time.
+
+{{ pic of nora and I making out }}
+
+#### 
+
+
