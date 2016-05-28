@@ -11,7 +11,6 @@ tags = [
 
 +++
 
-
 TODO: Make a timeline, illustrated?
 
 This post is a long highly personal and autobigraphical about my emotional relationship with laptops. some personal and probably irrelevant choices to you, regarding the history of computers I have owned. The result of which is that I now have a Chromebook Pixel 2, running GalliumOS, and it is the best computing experience I have had up to this point. My position is slanted and unfair, and on top of that, I'm a linux user. If you are not interested in ThinkPads, linux as a daily driver, or the Chromebook Pixel, this is going to be very very boring.
@@ -79,6 +78,8 @@ The following morning I was an atheist and a troubleshooter.
 {{ beethoven's 5th moment }}
 
 I was an evangelist from that point forward. All I wanted were thinkpads from then on. There was no doubt in my mind that every laptop I would own ever again was a thinkpad, in the same form factor, and it would treat me just as well.
+
+Over the course of that machine's life, I replace the keyboard, the hard drive, upgraded the memory, and even replace the panel and bezel at one point. All within my reach as a child, given how well designed they were. It was solidified in my mind, that this was the machine for me, the clumsy but persistent tinkerer.
 
 #### Crime bosses of Tekken 3, MGS, FIFA 98 the funk soul brothers
 #### Blinded by the light
@@ -149,10 +150,35 @@ Eventually, I was kicked out of High School for various reasons, including truan
 
 #### A lul in the boring world of military intelligence
 
-I left New York and joined the army, and was stationed in El Paso, Texas after basic and AIT in Georgia. Not much of interest for this story happened here, although I did continue selling bootleg games, I had other interests and a desktop PC that I played Masters of Orion on constantly. My focus was squarely on the love, thighs, lips, and hips of a certain lady I met in high school. I also started getting a salary and spending it on tattoos, so my desire for money was greatly reduced.
+I left New York and joined the army, and was stationed in El Paso, Texas after basic and AIT in Georgia. Not much of interest for this story happened here, although I did continue selling bootleg games, I had other interests and a desktop PC that I played Masters of Orion on constantly. My focus was squarely on the love, lips, thighs, and hips of a certain lady I met in high school. I also started getting a salary and spending it on tattoos, so my desire for money was greatly reduced.
 
 {{ pic of nora and I making out }}
 
-#### 
+#### Haaj, and getting a real job.
 
+After I left the army, I started working as an on-site technician for a shitty IT staffing company called Insight Technologies, doing conversions of retail banks into other retail banks when they did hardware refreshes or were took over by other banks takeovers. The whole world was Windows-based and I needed a computer with a modem and an ethernet jack built in that I could carry everywhere and reliably drop on the floor.
+
+I needed to log into Windows 2k3 domains and ensure that the DC could call home and was properly configured. This was not the job for my sexier-than-thou Powerbook. No, it was time to take my pilgramage home to the IBM ThinkPad.
+
+There was almost no decision that needed to be made. I was a 20 year old IT professional. A refurb ThinkPad X-series from ebay was the only way. I knew from experience that if anything was wrong, I could probably fix it with more crap ordered from ebay.
+
+{{ Thinkpad series I had }}
+
+#### Trading systems and cold raised flooring
+
+This thinkpad survived that job, and then another one where I spent a lot of time going to data centers and sitting on floors configuring networking equiptment and rescuing servers. The harsh reality of this was the dreaded cisco rollover cable and serial cables for switches. A serial port? On a laptop? Once again, ThinkPad to the rescue. I had a desktop at work that was amazing and super high spec and ran Windows XP x64, the same as our trading platform. My road warrior kit, however, was this tiny thinkpad and pile of ethernet cables.
+
+It was at this point I started to run linux on a daily basis for all the supoprt machines for our operations. Firewalls, ntop boxes, netflow and packet capture for performance analysis. I became a linux guy through and through, and the next logical step was linux on my daily driver. As soon as I left my position after five years in trading operations, I began to run linux on my laptop. The computer I went with was another refurbished thinkpad x60.
+
+{{ x60 }}
+
+I bought one for my girlfriend too, she needed an indestructible computer that I could fix when she broke it, and got her to fall in love with the simple design, and long battery life, and the understated beauty of a machine that has decades of design experience built into it, meaning it shed the things no one needed or wanted. She got the tablet model because it was cheaper on ebay, and used it for just about four years before succumbing to the cult of mac.
+
+This machine had an interesting feature that I tested to the extreme. The thinkpad had little holes at the bottom called keyboard drains, which routed liquid around critical components and into these drains if liquids were spilled on it. One night I was drinking a little heavily and watching cartoons in my bed, with a 24 ounce can of Coors balance next to the computer. I fell asleep, and when I awoke, the can was empty and the sheets were soaked. The computer was also soaked. The entire can of coors had gone through the keyboard and through the drains. The loop of episodes of aqua teen I was watching were still playing. My little thinkpad had soft, warm, beer breath coming out of the CPU vent on the side. 
+
+I was even deeper in love.
+
+#### Consultant badass
+
+The next move was to ThoughtWorks, as a devops and automation consultant, where they give you the option of a Dell or an Apple product. As a man of principle who was used to have a real package manager and OS, I opted for the dell and left it in my living room to watch porn and drive my sound system. I spent my relocation bonus package on a refurb thinkpad x200s. The world balked at Lenovo's drop in build quality, but I didn't care. This machine lasted me over half a million miles in 2 years of near constant travelling to different clients, through new batteries, and memory and SSD upgrades. I had full disk encryption and a badass SSD before apple was even considering having it. I was running tons of vagrant VMs with ease on my tiny workhorse of a machine. We stayed together through thick and thin, until an unfortunate accident.
 
