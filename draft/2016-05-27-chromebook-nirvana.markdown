@@ -27,7 +27,7 @@ We would fly and I would carry the computer because I was the most interested in
 
 Thankfully I was awkward and shy and could just blush and close it up and get on with moving to my gate and begin thinking like a janitor to find a place to plug in. Very few people at this technology drought moment in time had portable electronics they carried around everywhere and were concerned about electricity. 
 
-{{ my family with me at 6 }}
+{{ my family with me at 6 92'-93' }}
 
 ### Toshiba on the teat
 
@@ -36,6 +36,7 @@ The first laptop I ever used was a {{WHAT WAS IT?}}. I played The Secret of Monk
 {{ Screenshot of secret of monkey island }}
 
 {{ tech specs and photos of toshiba protoge/satellite 40 }}
+Man, I remember using these too. I used them on Toshiba T1900 and T1910 laptops. Back in..... 1994 and 1995! 
 
 ### Learning about the guts of the boxes
 
