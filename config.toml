@@ -24,7 +24,7 @@ page = "/:slug"
 [params.offcanvas]
   # Menu items
   title = "matt urbanski"
-  bio = "systems automation, human, devops?, booze."
+  bio = "Shot the horse after the door has bolted"
   followme = "you can find me on the block in addition to"
 
   [[params.offcanvas.socialnetworks]]
