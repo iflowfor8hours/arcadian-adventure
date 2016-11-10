@@ -40,10 +40,6 @@ page = "/:slug"
     url = "//github.com/iflowfor8hours"
 
   [[params.offcanvas.socialnetworks]]
-    name = "Twitter"
-    url = "//twitter.com/iflowfor8hours"
-
-  [[params.offcanvas.socialnetworks]]
     name = "Presentations and Published work"
     url = "//www.iflowfor8hours.info/page/presentations/"
 
