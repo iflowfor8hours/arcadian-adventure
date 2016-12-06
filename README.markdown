@@ -21,3 +21,11 @@ Codeship does it:
     ln -s ~/bin/${HUGO_BINARY}/${HUGO_BINARY} ~/bin/hugo
     hugo
     rsync --delete -ravz -e "ssh" ~/clone/public/ www-data@192.34.62.103:/var/www/iflowfor8hours.info
+
+
+
+TODO
+---------
+
+Docker deployment
+Host a mirror on gh-pages
