@@ -66,4 +66,6 @@ I then wrote the script for building the content and the container. I figured I 
 
 I played with that for a bit, and everything works as expected. Now I need to get lets encrypt working. Since certs are free and I already own my domain, I can afford to have an https enabled staging environment. I now needed to decide on a docker hosting environment and platform. The easiest way to get up and running with containerized infrastructure is CoreOS, hands down. I spun up a coreos box on DO and then reconfigured my DNS to point it at.
 
+The next phase will be to setup the pipeline and finally deploy my containers to the newly provisioned container host.
 
+I also plan on migrating to IPv6 when the hosts are setup properly.
