@@ -31,5 +31,7 @@ TODO
   test.iflowfor8hours.info test = gh-pages 
   staging.iflowfor8hours.info = surge.sh
   iflowfor8hours.info = 
-Docker deployment
+
+~~Docker deployment~~
+Deploy consistently?
 Host a mirror on gh-pages
