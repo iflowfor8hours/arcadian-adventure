@@ -27,5 +27,9 @@ Codeship does it:
 TODO
 ---------
 
+3  environments:
+  test.iflowfor8hours.info test = gh-pages 
+  staging.iflowfor8hours.info = surge.sh
+  iflowfor8hours.info = 
 Docker deployment
 Host a mirror on gh-pages
