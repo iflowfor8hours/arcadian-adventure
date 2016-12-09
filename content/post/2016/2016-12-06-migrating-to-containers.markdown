@@ -77,12 +77,12 @@ This all worked fine locally, so I thought it would be a good idea to try kickin
 
 Surge is a service that hosts static web content and provides some tooling for deploying it from the command line. They built a really simple cli and don't charge you anything for the privilege. This was a great excuse to check them out, and it turns out that I'm a fan. Everything I have tried works fine, although my use case is pretty simple. They charge for real SSL support, but this is just my staging environment so I don't really care about having a legit cert. All I had to do to deploy is below.
 
-    hugo -v -b http://staging.iflowfor8hours.info -d staging -D 
+    hugo -v -b https://staging.iflowfor8hours.info -d staging -D 
     surge staging --domain https://staging.iflowfor8hours.info
     
 It was dead simple, and I added it as a stage in my [codeship pipeline](https://app.codeship.com/projects/97531)
 
-At this point, I thought it was time to provision my production environment. I did so using `docker-machine`. This allowed me to spin up a functional CoreOS box without much hassle. I like using CoreOS as my docker host in many scenarios.
+At this point, I thought it was time to provision my production environment. I did so using `docker-machine`. This allowed me to spin up a functional CoreOS box without much hassle. I like using CoreOS as a docker host since I believe it is just about as simple as it gets to use.
 
     docker-machine create --driver=digitalocean \
     --digitalocean-access-token=ACCESS_TOKEN \
@@ -92,6 +92,5 @@ At this point, I thought it was time to provision my production environment. I d
     --digitalocean-ssh-user=core \
     iflowfor8hours-core
 
-Now I have a box up and running and can communicate with it securely using the standard docker tools. In this case, I'll need to write a compose file since two containers will be running.
+In the next entry, I'll deploy my site and the letsencrypt proxy to my container host, add the production deploy to to my pipeline.
 
-I played with that for a bit, and everything works as expected. Now I need to get letsencrypt working. Since certs are free and I already own my domain, I can afford to have an https enabled staging environment. I now needed to decide on a docker hosting environment and platform. The easiest way to get up and running with containerized infrastructure is CoreOS, hands down. I'm using docker-machine to spin it up and provision it as a docker host. Go get a DO access token and run the following if you're still riding along.
