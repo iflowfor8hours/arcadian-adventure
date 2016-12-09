@@ -18,48 +18,46 @@ The time has come to move off my statically hosted ubuntu box on Digital Ocean a
 
 _Why?_
 
-My Ubuntu box was 32-bit Ubuntu, and I had not done much in terms of maintaining it in a while. I considered upgrading it, but the configuration was a _work of art_ and my work with CoreOS and containers in my dayjob inspired me to move to something more modern. I didn't want to go the Ansible plus static infrastructure route, since I have been migrating clients off that for a few years now. I wanted to run a few other applications in containers as well so I thought this would be a good starting point. I'm documenting it because it was a fun exercise and others might benefit from it. Here is the existing infrastructure and pipeline:
+My Digial Ocean Ubuntu box was a 32-bit Ubuntu box, and I had not done much in terms of maintaining it for a long while. I considered upgrading, patching, and keeping it alive, but the configuration was kind of a _work of art_. I had experimented with a lot of things over the years, and I didn't config manage anything other than my dotfiles. I had some ideas about new and different things I wanted to run on this box going forward in addition to just the blog.
+My work with CoreOS and docker at my dayjob inspired me to move to a more modern, containerized infrastructure. I didn't want to go the Ansible plus static infrastructure route since I have been migrating clients off that for a while now. I wanted to run a few other applications in containers as well so I thought this would be a good starting point. I'm documenting it because it was a fun exercise and others might benefit from it. Here is the existing infrastructure and pipeline:
 
-Github -> Codeship Pipeline to hugo build, smoke test, then rsync artifacts -> Digital Ocean box with NGINX and Let's Encrypt SSL
+Github -> Codeship Pipeline to hugo build, smoke test, rsync generated dir -> Digital Ocean box with NGINX and Let's Encrypt SSL.
 
-Simple setup. I didn't really like the rsync in the pipeline, or NGINX being non-configuration managed, but it worked and was comfortable.
+Simple setup. I did not like the rsync and that I hand-rolled the letsencrypt stuff interactively. Nor did I like that the NGINX config was also manually built.
 
 Here is the desired state:
 
-Github push -> something Hugo build -> something Container packaging -> Ship to containerized host -> Decomission previous nginx container.
+Github push -> codeship Hugo build -> push to http staging env -> test -> containerize -> version artifact -> deploy to container host with SSL -> test -> chill.
 
-I also wanted to put letsencrypt into its own container for bonus points, and so that I could run the same artifact locally and remotely.
+I also wanted to put letsencrypt into its own container so that I could run the same blog artifact locally and remotely.
 
-The plan looks something like this:
+The plan initially looked something like this:
 
-1. Move nginx and content into a container
-2. Create a pipeline to deploy to a container host
+4. Build a container with nginx and the content to test locally
+2. Create a pipeline to build and deploy to staging env
 3. Provision the new container host
 5. Run the pipeline and deploy to the container host
 6. Cut over the DNS configuration to the container host
 7. Test everything
-8. Migrate to IPv6
 
-I got started by doing a basic local nginx container that mounted my generated hugo source by mounting it. This is for my quick iterative development workflow.
+I got started by writing a little script that builds an nginx container locally and mounts the generated hugo source directory. This is really just for sanity checking the nginx config and to ensure that everything configuration and docker related is working.
 
-      #!/bin/bash
-      hugo --cleanDestinationDir --baseURL http://localhost/
-      chmod -R 777 public
-      docker stop iflowfor8hours-nginx-sidecar
-      docker rm -f iflowfor8hours-nginx-sidecar
-      docker run --name iflowfor8hours-nginx-sidecar -v "$PWD"/public:/usr/share/nginx/html -v "$PWD"/dev/nginx.conf:/etc/nginx/nginx.conf:ro -p 80:80 nginx:alpine
+    #!/bin/bash
+    hugo --cleanDestinationDir --baseURL http://localhost/
+    chmod -R 777 public
+    docker stop iflowfor8hours-nginx-sidecar
+    docker rm -f iflowfor8hours-nginx-sidecar
+    docker run --name iflowfor8hours-nginx-sidecar -v "$PWD"/public:/usr/share/nginx/html -v "$PWD"/dev/nginx.conf:/etc/nginx/nginx.conf:ro -p 80:80 nginx:alpine
 
-The `chmod -R 777` is ugly, but I'm not concerned with anything getting broken since this is generated code and only used locally.
+It makes for an okay dev environment, but realistically `hugo serve` works just as well in such a simple environment.
 
-The next phase involved creating the container that I would use in production. I didn't want to bake the letsencrypt stuff into the container because I felt that it violated the concept of small, single purpose containers. I wrote a minimal `Dockerfile` first and built it by hand. 
+I next created the container that I will use in production. I didn't want to bake the letsencrypt stuff into the container because I wanted to keep each container as isolated as possible. Conceptually, containers should be more like processes than servers. I wrote a minimal `Dockerfile` first and built it by hand.
 
     FROM nginx:alpine
     COPY public /usr/share/nginx/html
     RUN chown -R nginx:nginx /usr/share/nginx/html
     COPY dev/nginx.conf /etc/nginx/nginx.conf
-
-I'm using nginx:alpine because I was considering using [hyper.sh](https://hyper.sh) to host my containers, and still might. I wanted to keep it as small as possible since this is only going to be serving static html. This was another reason for the added complexity cost of putting letsencrypt in another container.
-
+    
 I then wrote the script for building the content and the container. I figured I might as well do this now, as the CI system will need some kind of entrypoint. This also helped me iterate quickly on my local box. 
 
     #!/bin/bash
@@ -75,7 +73,16 @@ I then wrote the script for building the content and the container. I figured I 
     docker build -t iflowfor8hours:blog .
     echo docker run --name bakedblog -p 80:80 iflowfor8hours:blog
 
-I played with that for a bit, and everything works as expected. Now I need to get letsencrypt working. Since certs are free and I already own my domain, I can afford to have an https enabled staging environment. I now needed to decide on a docker hosting environment and platform. The easiest way to get up and running with containerized infrastructure is CoreOS, hands down. I'm using docker-machine to spin it up and provision it as a docker host. Go get a DO access token and run the following if you're still riding along.
+This all worked fine locally, so I thought it would be a good idea to try kicking off a live staging environment. I wanted to try something new, and had read about surge.sh. I signed up and pointed my staging DNS [staging.iflowfor8hours.info](https://staging.iflowfor8hours.info) at [surge.sh](https://surge.sh), and deployed my work from the command line.
+
+Surge is a service that hosts static web content and provides some tooling for deploying it from the command line. They built a really simple cli and don't charge you anything for the privilege. This was a great excuse to check them out, and it turns out that I'm a fan. Everything I have tried works fine, although my use case is pretty simple. They charge for real SSL support, but this is just my staging environment so I don't really care about having a legit cert. All I had to do to deploy is below.
+
+    hugo -v -b http://staging.iflowfor8hours.info -d staging -D 
+    surge staging --domain https://staging.iflowfor8hours.info
+    
+It was dead simple, and I added it as a stage in my [codeship pipeline](https://app.codeship.com/projects/97531)
+
+At this point, I thought it was time to provision my production environment. I did so using `docker-machine`. This allowed me to spin up a functional CoreOS box without much hassle. I like using CoreOS as my docker host in many scenarios.
 
     docker-machine create --driver=digitalocean \
     --digitalocean-access-token=ACCESS_TOKEN \
@@ -86,3 +93,5 @@ I played with that for a bit, and everything works as expected. Now I need to ge
     iflowfor8hours-core
 
 Now I have a box up and running and can communicate with it securely using the standard docker tools. In this case, I'll need to write a compose file since two containers will be running.
+
+I played with that for a bit, and everything works as expected. Now I need to get letsencrypt working. Since certs are free and I already own my domain, I can afford to have an https enabled staging environment. I now needed to decide on a docker hosting environment and platform. The easiest way to get up and running with containerized infrastructure is CoreOS, hands down. I'm using docker-machine to spin it up and provision it as a docker host. Go get a DO access token and run the following if you're still riding along.
