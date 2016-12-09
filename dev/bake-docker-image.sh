@@ -1,5 +1,6 @@
 #!/bin/bash
 # Create a production and non-prod BASEURL environment variable in pipeline configuration
+set -e
 
 if [ -z "${BASEURL}" ]; then 
     HUGO_BASEURL='https://localhost/'
