@@ -12,7 +12,7 @@ tags = [
 
 +++
 
-![WhiteFox Image Courtesy of https://www.reddit.com/user/Z085](whitefox-clean.jpg)
+![WhiteFox Image Courtesy of https://www.reddit.com/user/Z085](/whitefox-clean.jpg)
 
 Weakness got the best of me, and I purchased the [WhiteFox keyboard kit](https://www.massdrop.com/buy/the-whitefox-keyboard) from Massdrop. Ever since I built my ErgoDox Infinity and played around with the TMK firmware to customize it, I've always wanted another fully-programmable 60% board like the [GH60](http://blog.komar.be/projects/gh60-programmable-keyboard/) or [GMK Infinity](https://www.massdrop.com/buy/infinity-keyboard-kit). Up to this point, I have settled for the significantly less expensive and less customizable Pok3r, and found some minor annoyances around remapping function keys enough to warrant the purchase. Sort of.
 
