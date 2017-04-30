@@ -8,23 +8,12 @@ stages:
 - build_image
 
 variables:
-<<<<<<< HEAD
-  BASEURL: https://iflowfor8hours.info/
-  HUGO_BINARY: hugo_0.17_Linux-64bit
-  HUGO_VERSION:	0.17
-  CONTAINER_RELEASE_IMAGE: registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/image
-
-before_script:
-  - wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tar.gz
-  - tar xzf ${HUGO_BINARY}.tar.gz -C ~/bin/
-=======
-  BASEURL: https://iflowfor9hours.info/
+  BASEURL: "https://iflowfor8hours.info/"
   CONTAINER_RELEASE_IMAGE: registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog
 
 before_script:
   - wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17_Linux-64bit.tar.gz
   - tar xzf hugo_0.17_Linux-64bit.tar.gz -C ~/bin/
->>>>>>> rename gitlab again
   - npm install --global surge
 
 staging:
