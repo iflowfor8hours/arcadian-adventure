@@ -3,33 +3,30 @@ services:
 - docker:dind
 
 stages:
+- compile
+- build_image
 - staging
 - production
-- build_image
 
 variables:
-  BASEURL: "https://iflowfor8hours.info/"
   CONTAINER_RELEASE_IMAGE: registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog
 
 before_script:
-  - wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17_Linux-64bit.tar.gz
-  - tar xzf hugo_0.17_Linux-64bit.tar.gz -C ~/bin/
-  - npm install --global surge
+  - BUILD_DIR="/tmp/build"
+  - eval `ssh-agent -s`
+  - echo "$SSH_PRIVATE_KEY" | ssh-add /dev/stdin
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerinit ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 
-staging:
-  stage: staging
-  script:
-  - ~/bin/hugo_0.17_linux_amd64/hugo_0.17_linux_amd64 -b https://staging.iflowfor8hours.info -d staging
-  - surge staging --domain staging.iflowfor8hours.info
-  - curl -s -k staging.iflowfor8hours.info| grep matt@iflowfor8hours.info || echo "SOMETHING WENT WRONG"
+cache:
+  paths:
+    - "$BUILD_DIR"
 
-production:
-  stage: production
+compile:
+  stage: compile
+  image: jguyomard/hugo-builder:latest
   script:
-  - ~/bin/hugo_0.17_linux_amd64/hugo_0.17_linux_amd64 -b https://iflowfor8hours.info
-  - rsync --delete -ravz -e "ssh" ~/clone/public/ www-data@prod.iflowfor8hours.info:/var/www/iflowfor8hours.info
-  only:
-  - master
+    - hugo --destination "$BUILD_DIR"
 
 build_image:
   stage: build_image
@@ -37,3 +34,21 @@ build_image:
     - docker login -u iflowfor8hours -p $CI_BUILD_TOKEN registry.gitlab.com
     - docker build --pull -t $CONTAINER_RELEASE_IMAGE .
     - docker push $CONTAINER_RELEASE_IMAGE
+
+staging:
+  stage: staging
+  image: node
+  script:
+    - npm install --global surge
+    - wget https://github.com/spf13/hugo/releases/download/v0.20.6/hugo_0.20.6_Linux-64bit.deb
+    - dpkg --install hugo_0.20.6_Linux-64bit.deb
+    - surge staging --domain staging.iflowfor8hours.info
+    - curl -s -k staging.iflowfor8hours.info| grep matt@iflowfor8hours.info || echo "SOMETHING WENT WRONG"
+
+production:
+  stage: production
+  image: jguyomard/hugo-builder:latest
+  script:
+    - hugo --destination "$BUILD_DIR"
+    - minify -r -o $BUILD_DIR/ $BUILD_DIR/
+    - rsync --delete -razv -e "ssh" "$BUILD_DIR"/ "$SSH_HOSTDEST" --checksum
