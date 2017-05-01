@@ -25,7 +25,7 @@ compile:
   stage: compile
   image: jguyomard/hugo-builder:latest
   script:
-    - hugo --destination "$BUILD_DIR" --baseurl = "$BASEURL"
+    - hugo --destination "$BUILD_DIR" --baseurl "$BASEURL"
 
 build_image:
   stage: build_image
@@ -52,6 +52,6 @@ production:
     BASEURL: https://prod.iflowfor8hours.info
   image: jguyomard/hugo-builder:latest
   script:
-    - hugo --destination "$BUILD_DIR" --baseurl "$BASEURL"
+    - hugo --destination "$BUILD_DIR" --baseURL "$BASEURL"
     - minify -r -o $BUILD_DIR/ $BUILD_DIR/
     - rsync --delete -razv -e "ssh" "$BUILD_DIR"/ "$SSH_HOSTDEST" --checksum
