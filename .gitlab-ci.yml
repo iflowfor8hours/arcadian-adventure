@@ -1,33 +1,31 @@
 ---
 image: docker:git
 services:
-- docker:dind
+  - docker:dind
 
 stages:
-- compile
-- build_image
-- staging
-- production
+  - compile
+  - build_image
+  - staging
+  - production
 
 variables:
-CONTAINER_RELEASE_IMAGE: registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog
+  CONTAINER_RELEASE_IMAGE: registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog
+  BASEURL: https://dev.iflowfor8hours.info
 
 before_script:
+  - BASEURL="https://dev.iflowfor8hours.info"
   - BUILD_DIR="/tmp/build"
   - eval `ssh-agent -s`
   - echo "$SSH_PRIVATE_KEY" | ssh-add /dev/stdin
   - mkdir -p ~/.ssh
   - '[[ -f /.dockerinit ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 
-cache:
-paths:
-   - /tmp/build
-
 compile:
   stage: compile
   image: jguyomard/hugo-builder:latest
   script:
-    - hugo --destination "$BUILD_DIR"
+    - hugo --destination "$BUILD_DIR" --baseurl = "$BASEURL"
 
 build_image:
   stage: build_image
@@ -43,13 +41,17 @@ staging:
     - npm install --global surge
     - wget https://github.com/spf13/hugo/releases/download/v0.20.6/hugo_0.20.6_Linux-64bit.deb
     - dpkg --install hugo_0.20.6_Linux-64bit.deb
+    - hugo build -b https://staging.iflowfor8hours.info -d staging
     - surge staging --domain staging.iflowfor8hours.info
     - curl -s -k staging.iflowfor8hours.info| grep matt@iflowfor8hours.info || echo "SOMETHING WENT WRONG"
 
 production:
   stage: production
+  variables:
+    CONTAINER_RELEASE_IMAGE: registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog
+    BASEURL: https://prod.iflowfor8hours.info
   image: jguyomard/hugo-builder:latest
   script:
-    - hugo --destination "$BUILD_DIR"
+    - hugo --destination "$BUILD_DIR" --baseurl "$BASEURL"
     - minify -r -o $BUILD_DIR/ $BUILD_DIR/
     - rsync --delete -razv -e "ssh" "$BUILD_DIR"/ "$SSH_HOSTDEST" --checksum
