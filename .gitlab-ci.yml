@@ -1,3 +1,4 @@
+---
 image: docker:git
 services:
 - docker:dind
@@ -9,7 +10,7 @@ stages:
 - production
 
 variables:
-  CONTAINER_RELEASE_IMAGE: registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog
+CONTAINER_RELEASE_IMAGE: registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog
 
 before_script:
   - BUILD_DIR="/tmp/build"
@@ -19,8 +20,8 @@ before_script:
   - '[[ -f /.dockerinit ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 
 cache:
-  paths:
-    - "$BUILD_DIR"
+paths:
+   - /tmp/build
 
 compile:
   stage: compile
