@@ -10,8 +10,8 @@ stages:
   - production
 
 variables:
-  CONTAINER_RELEASE_IMAGE: registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog
-  BASEURL: https://dev.iflowfor8hours.info
+  CONTAINER_RELEASE_IMAGE: "registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog"
+  BASEURL: "https://dev.iflowfor8hours.info"
 
 before_script:
   - BASEURL="https://dev.iflowfor8hours.info"
