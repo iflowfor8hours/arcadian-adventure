@@ -11,10 +11,9 @@ stages:
 
 variables:
   CONTAINER_RELEASE_IMAGE: "registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog"
-  BASEURL: "https://dev.iflowfor8hours.info"
 
 before_script:
-  - BASEURL="https://dev.iflowfor8hours.info"
+  - UID="$(id -u)"
   - BUILD_DIR="/tmp/build"
   - eval `ssh-agent -s`
   - echo "$SSH_PRIVATE_KEY" | ssh-add /dev/stdin
@@ -25,7 +24,7 @@ compile:
   stage: compile
   image: jguyomard/hugo-builder:latest
   script:
-    - hugo --destination "$BUILD_DIR" --baseurl "$BASEURL"
+    - docker run -v $PWD:/src -it -u $UID:$UID jguyomard/hugo-builder hugo
 
 build_image:
   stage: build_image
@@ -34,13 +33,13 @@ build_image:
     - docker build --pull -t $CONTAINER_RELEASE_IMAGE .
     - docker push $CONTAINER_RELEASE_IMAGE
 
-staging:
-  stage: staging
+surge:
+  stage: surge
   image: node
   script:
     - npm install --global surge
-    - wget https://github.com/spf13/hugo/releases/download/v0.20.6/hugo_0.20.6_Linux-64bit.deb
-    - dpkg --install hugo_0.20.6_Linux-64bit.deb
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.31.1/hugo_0.31.1_Linux-64bit.deb
+    - dpkg --install hugo_0.31.1_Linux-64bit.deb
     - hugo build -b https://staging.iflowfor8hours.info -d staging
     - surge staging --domain staging.iflowfor8hours.info
     - curl -s -k staging.iflowfor8hours.info| grep matt@iflowfor8hours.info || echo "SOMETHING WENT WRONG"
@@ -49,7 +48,6 @@ production:
   stage: production
   variables:
     CONTAINER_RELEASE_IMAGE: registry.gitlab.com/iflowfor8hours/iflowfor8hours.info/blog
-    BASEURL: https://prod.iflowfor8hours.info
   image: jguyomard/hugo-builder:latest
   script:
     - hugo --destination "$BUILD_DIR" --baseURL "$BASEURL"

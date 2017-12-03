@@ -1,4 +1,5 @@
 #!/bin/bash
+docker network create --driver=overlay --attachable webthing
 
 docker run -v $PWD:/src -it -u 1000:1000 jguyomard/hugo-builder hugo
 
