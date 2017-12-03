@@ -2,7 +2,6 @@ title = "iflowfor8hours.info"
 baseurl = "https://www.iflowfor8hours.info/"
 languageCode = "en-us"
 theme = "hugo-hikari-theme"
-canonifyurls = true
 
 post = "/:year/:slug"
 page = "/:slug"
@@ -10,7 +9,7 @@ page = "/:slug"
 [params]
   name = "Matt Urbanski"
   description = "devops, automation, webops and explosions."
-  copyright = "2016, matt urbanski"
+  copyright = "2017, matt urbanski"
 
   googleanalytics = "UA-22586140-1"
 
